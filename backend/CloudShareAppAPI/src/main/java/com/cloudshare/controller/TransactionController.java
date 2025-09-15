@@ -1,24 +1,26 @@
-package in.bushansirgur.cloudshareapi.controller;
+package com.cloudshare.controller;
 
-import in.bushansirgur.cloudshareapi.document.PaymentTransaction;
-import in.bushansirgur.cloudshareapi.document.ProfileDocument;
-import in.bushansirgur.cloudshareapi.repository.PaymentTransactionRepository;
-import in.bushansirgur.cloudshareapi.service.ProfileService;
-import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.cloudshare.document.PaymentTransaction;
+import com.cloudshare.document.ProfileDocument;
+import com.cloudshare.repository.PaymentTransactionRepository;
+import com.cloudshare.service.ProfileService;
+
 import java.util.List;
 
 @RestController
 @RequestMapping("/transactions")
-@RequiredArgsConstructor
 public class TransactionController {
 
-    private final PaymentTransactionRepository paymentTransactionRepository;
-    private final ProfileService profileService;
+	@Autowired
+    private PaymentTransactionRepository paymentTransactionRepository;
+	@Autowired
+    private ProfileService profileService;
 
     @GetMapping
     public ResponseEntity<?> getUserTransactions() {
