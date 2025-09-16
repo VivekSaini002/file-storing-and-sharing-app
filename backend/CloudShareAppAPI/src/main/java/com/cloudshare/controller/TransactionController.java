@@ -14,7 +14,6 @@ import com.cloudshare.service.ProfileService;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/transactions")
 public class TransactionController {

@@ -20,11 +20,14 @@ const Dashboard = () => {
     const { fetchUserCredits } = useContext(UserCreditsContext);
     const MAX_FILES = 5;
 
+    
+
     useEffect(() => {
         const fetchRecentFiles = async () => {
             setLoading(true);
             try {
                 const token = await getToken();
+                // console.log(token);
                 // Use the existing endpoint that we know works
                 const res = await axios.get(apiEndpoints.FETCH_FILES, {
                     headers: {

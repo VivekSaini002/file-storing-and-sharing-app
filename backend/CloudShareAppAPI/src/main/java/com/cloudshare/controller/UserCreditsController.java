@@ -11,7 +11,6 @@ import com.cloudshare.document.UserCredits;
 import com.cloudshare.dto.UserCreditsDTO;
 import com.cloudshare.service.UserCreditsService;
 
-@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/users")
 public class UserCreditsController {

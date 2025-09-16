@@ -17,6 +17,7 @@ const Subscription = () => {
     const {credits, setCredits, fetchUserCredits} = useContext(UserCreditsContext);
 
     const {user} = useUser();
+    console.log(getToken);
 
     // Plans configuration
     const plans = [
